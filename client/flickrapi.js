@@ -1,7 +1,7 @@
 (function() {
             var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
             $.getJSON( flickerAPI, {
-	            tags: "astronaut",
+	            tags: document.getElementById('content').getElementsByTagName('h1')[0].innerHTML,
 	            tagmode: "any",
 	            format: "json"
 	        })
