@@ -1,0 +1,158 @@
+/* CSS declarations go here */
+body {
+	background-color: #000;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	z-index: 5;
+}
+
+#form{
+	display: block;
+	text-align: center;
+	width:500px;
+	height: 525px;
+	background-color: #33abfa;
+	margin: auto;
+	float: middle;
+	padding-top: 30px;
+	padding-left: 50px;
+	padding-right: 50px;
+	margin-top: 60px;
+
+}
+#formword{
+	width: 100%;
+	margin-bottom: 5px;
+}
+#formdescription{
+	width: 100%;
+	line-height: 13px;
+	height: 225px;
+	text-align: top;
+	vertical-align: top;
+	margin-bottom: 15px;
+	resize: none;
+}
+#formbutton{
+	width: 100%;
+    background-color: #888888;
+    text-decoration: none;
+    padding-left: 135px;
+    padding-right: 135px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.rounded{
+	border: .1px solid #ccc;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    padding: 4px 7px;
+    outline: 0;
+    -webkit-appearance: none;
+}
+.rounded:focus {
+    border: 2px red solid;
+}
+
+#slideshow{
+	display:none;
+}
+
+#background {
+	position: fixed; 
+	top: -50%; 
+	left: -50%; 
+	width: 200%; 
+	height: 200%;
+	z-index: -1;
+	opacity: 0.6;
+}
+
+#background img {
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	right: 0; 
+	bottom: 0; 
+	margin: auto; 
+	min-width: 50%;
+	min-height: 50%;
+	float: center;
+}
+
+#content {
+	color: #FFFFFF;
+	width: 50%;
+	height: 50%;
+	top: 0; left: 0; bottom: 0; right: 0;
+	text-align: center;
+	margin: auto;
+	position: absolute;
+	opacity: 1.0;
+}
+
+#content h1 {
+	font-size: 21px;
+}
+
+#content h2 {
+	font-size: 16px;
+}
+
+#footer{
+	position:absolute;
+	bottom:0;
+	width:100%;
+	height:25px;
+	background-color: #000000;
+	padding-left: 12px;  
+	padding-bottom: 20px;
+	color: #999;
+	opacity:0;
+	transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+}
+#footer:hover{
+	opacity: .8;
+}
+
+#footer a, a:visited, a:active{
+	text-decoration: none;
+}
+
+#aboutpopup{
+	width: 150px;
+	height:190px;
+	opacity: .8;
+	display: none;
+	background-color: black;
+	position: absolute;
+	bottom: 45px;
+	padding: 10px;
+	margin-left: 10px;
+	color: #fff;
+}
+.credits{
+	font-size: 9px;
+	padding-top: 29px;
+}
+.credits a{
+	text-decoration: none;
+	color: #aaa;
+}
+.credits a:visited{
+	text-decoration: none;		
+	color: #aaa;
+}
+.credits a:hover{
+	color:#36ab12;
+}

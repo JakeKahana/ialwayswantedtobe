@@ -1,0 +1,49 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>I Always Wanted To Be...</title>
+    <meta name="description" content="What Did You Want To Be">
+</head>
+
+<body>
+  {{> form}}
+  {{> slideshow}}
+  {{> footer}}
+</body>
+
+<template name="form">
+	<div id="form" class="rounded">
+		<h1>I've always wanted to be...</h2>
+		<input id="formword" type="text" placeholder="tell me tell me tell me" maxlength="15" class="rounded"></input><br />
+		<textarea id="formdescription" type="text" maxlength="200" placeholder="why?" class="rounded"></textarea><br />
+		<a id="formbutton" href="#" class="rounded">Submit</a>
+	</div>
+</template>
+<!--  style="background: {{newbg}}"> -->
+<template name="slideshow">
+    <div id="slideshow">
+    	<div id="background">
+        </div>
+
+        <div id="content">
+            <h1>Astronaut</h1>
+            <h2>Lorem Ipsum Dolor Occaecat quis sriracha PBRB skateboard iPhone. Est leggings trust fund, dreamcatcher pug sunt 90's tofu XOXO sapiente reprehenderit. Street art commodo roof party in DIY ugh, proident whatever retro eu pug art party.</h2>
+        </div>
+    </div>
+</template>
+
+<template name="footer">
+  <div id="aboutpopup">
+    We've been collecting people's dreams and wishes anonymously since November 29, 2013. <br />Add yours or just scroll through other people's. <br /><br />
+    <span class="credits">Another site created by 
+        <a href="http:/www.jakekahana.com" target="_blank">Jake Kahana</a> 
+      and 
+        <a href="http://www.onattyso.com" target="_blank"> Natalie Sun</a>
+    </span>.
+  </div>
+  <div id="footer">
+    <a href="#">
+      <h6 id="abouttype">about</h6>
+    </a>
+  </div>
+</template>
