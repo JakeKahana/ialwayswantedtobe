@@ -2,7 +2,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>I Always Wanted To Be...</title>
-    <meta name="description" content="What Did You Want To Be">
+    <meta name="description" content="tell us what you wanted to be, and then explore what other people have said. ©2014 Natalie Sun / Jake Kahana">
+    <link href='http://fonts.googleapis.com/css?family=Gravitas+One|Text+Me+One' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
@@ -13,10 +14,28 @@
 
 <template name="form">
 	<div id="form" class="rounded">
-		<h1>I've always wanted to be...</h2>
-		<input id="formword" type="text" placeholder="tell me tell me tell me" maxlength="15" class="rounded"></input><br />
-		<textarea id="formdescription" type="text" maxlength="200" placeholder="why?" class="rounded"></textarea><br />
-		<a id="formbutton" href="#" class="rounded">Submit</a>
+		<p class="tobe">I've always wanted to be...</p>
+		
+    <input id="formword" type="text" placeholder="tell me tell me tell me" 
+            maxlength="15" class="rounded">
+    </input>
+
+    
+    <p class="because">because</p>
+
+		<textarea id="formdescription" type="text" maxlength="200" 
+              placeholder="why?" class="rounded">
+    </textarea>
+
+    
+    <a id="formbutton" href="#" class="rounded">
+      Submit
+    </a>
+    
+    <a id="formbutton" href="#" class="rounded">
+      Skip
+    </a>
+
 	</div>
 </template>
 <!--  style="background: {{newbg}}"> -->
@@ -24,21 +43,32 @@
     <div id="slideshow">
     	<div id="background">
         </div>
-
+          <a id="" href="#">Previous Slide</a>
         <div id="content">
-            <h1>Astronaut</h1>
-            <h2>Lorem Ipsum Dolor Occaecat quis sriracha PBRB skateboard iPhone. Est leggings trust fund, dreamcatcher pug sunt 90's tofu XOXO sapiente reprehenderit. Street art commodo roof party in DIY ugh, proident whatever retro eu pug art party.</h2>
+            <p class="tobe">I've always wanted to be...</p> <br />
+            <p class="job">An Astronaut</p>
+            <p class="because">because</p>
+            <p class="description">Lorem Ipsum Dolor Occaecat quis sriracha PBRB skateboard iPhone. Est leggings trust fund, dreamcatcher pug sunt 90's tofu XOXO sapiente reprehenderit. Street art commodo roof party in DIY ugh, proident whatever retro eu pug art party.</p>
         </div>
+        
+        <a id="" href="#">Next Slide</a>
+
+
     </div>
 </template>
 
 <template name="footer">
   <div id="aboutpopup">
-    We've been collecting people's dreams and wishes anonymously since November 29, 2013. <br />Add yours or just scroll through other people's. <br /><br />
+      A website about reliving your childhood and seeing what we all wish we’d be.
+      <br />
     <span class="credits">Another site created by 
-        <a href="http:/www.jakekahana.com" target="_blank">Jake Kahana</a> 
-      and 
-        <a href="http://www.onattyso.com" target="_blank"> Natalie Sun</a>
+        <a href="http:/www.jakekahana.com" target="_blank">
+          Jake Kahana
+        </a> 
+        and 
+        <a href="http://www.onattyso.com" target="_blank"> 
+          Natalie Sun
+        </a>
     </span>.
   </div>
   <div id="footer">
