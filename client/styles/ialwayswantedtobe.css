@@ -33,6 +33,7 @@ body {
 	vertical-align: top;
 	margin-bottom: 15px;
 	resize: none;
+	background-color: #fff;
 }
 #formbutton{
 	width: 200px;

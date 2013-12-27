@@ -7,7 +7,11 @@ if (Meteor.isClient) {
   // Meteor.call('loadNextTenJobs', function(err, result){
   //  put the resulting 10 jobs into our temporary array
   // });
-};
+}
+
+
+Meteor.subscribe("demodata");
+console.log(Demodata.find({}));
 
 var nextslide = function(){
   //ask server for 10 random elements from the collection (Methods;set them up on server, get them on client)
@@ -26,7 +30,7 @@ var nextslide = function(){
 
 
 Template.form.events({
-  'click #formbutton': function(){
+  'click .skip': function(){
   //make sure it's not empty data
 
   //add to collection
