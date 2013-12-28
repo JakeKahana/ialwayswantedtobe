@@ -9,7 +9,6 @@ if (Meteor.isClient) {
   // });
 }
 
-
 Meteor.subscribe("demodata");
 console.log(Demodata.find({}));
 
@@ -27,13 +26,46 @@ var nextslide = function(){
 // Template.slideshow.newbg = function(){
 //  return Session.get('slideBackground');
 // }
-
+Template.slideshow.events({
+  'click #nextslide': function(){
+    if (thisslide > alljobs.length){
+        thisslide = 5;
+      }else{
+        thisslide += 1; 
+        Template.slideshow.tempjob = function(){
+          return alljobs[thisslide].title;
+        };
+          
+        Template.slideshow.tempdesc = function(){
+          return alljobs[thisslide].description;
+        };        
+        //document.write.h1["title"]
+      }
+  }
+})
+Template.slideshow.events({
+  'click #previousslide': function(){
+    if (thisslide < alljobs.length){
+        thisslide = 0;
+      }else{
+        thisslide -= 1; 
+        Template.slideshow.tempjob = function(){
+          return alljobs[thisslide].title;
+        };
+          
+        Template.slideshow.tempdesc = function(){
+          return alljobs[thisslide].description;
+        };        
+        //document.write.h1["title"]
+      }
+  }
+})
 
 Template.form.events({
   'click .skip': function(){
   //make sure it's not empty data
-
-  //add to collection
+    document.getElementById("job").innerHTML = alljobs[thisslide].title;
+    document.getElementById("description").innerHTML = alljobs[thisslide].description;  //add to collection
 
     $('#form').fadeOut(350, function(){
         $("#slideshow").fadeIn(750);
