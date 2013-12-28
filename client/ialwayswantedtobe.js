@@ -25,47 +25,53 @@ var nextslide = function(){
 
 // Template.slideshow.newbg = function(){
 //  return Session.get('slideBackground');
-// }
+// }    
+
+
+var counter = 2;
+
+
 Template.slideshow.events({
   'click #nextslide': function(){
-    if (thisslide > alljobs.length){
-        thisslide = 5;
-      }else{
-        thisslide += 1; 
-        Template.slideshow.tempjob = function(){
-          return alljobs[thisslide].title;
-        };
-          
-        Template.slideshow.tempdesc = function(){
-          return alljobs[thisslide].description;
-        };        
-        //document.write.h1["title"]
-      }
+    var tempjob = document.getElementById('job');
+    var tempdesc = document.getElementById('description');
+    if (counter <= alljobs.length) {
+      counter += 1;
+      tempjob.innerHTML = alljobs[counter].title;
+      tempdesc.innerHTML = alljobs[counter].description;    
+    }
   }
 })
+
 Template.slideshow.events({
   'click #previousslide': function(){
-    if (thisslide < alljobs.length){
-        thisslide = 0;
-      }else{
-        thisslide -= 1; 
-        Template.slideshow.tempjob = function(){
-          return alljobs[thisslide].title;
-        };
-          
-        Template.slideshow.tempdesc = function(){
-          return alljobs[thisslide].description;
-        };        
-        //document.write.h1["title"]
-      }
+    var tempjob = document.getElementById('job');
+    var tempdesc = document.getElementById('description');
+    if (counter > 0) {
+      counter -= 1;
+      tempjob.innerHTML = alljobs[counter].title;
+      tempdesc.innerHTML = alljobs[counter].description;
+    };
   }
 })
 
 Template.form.events({
-  'click .skip': function(){
+  'click #submit': function(){
+    alljobs.push({
+      title: document.getElementById("formword").value,
+      description: document.getElementById("formdescription").value
+    });
+    $('#form').fadeOut(350, function(){
+        $("#slideshow").fadeIn(750);
+    });
+  }
+})
+
+Template.form.events({
+  'click #skip': function(){
   //make sure it's not empty data
-    document.getElementById("job").innerHTML = alljobs[thisslide].title;
-    document.getElementById("description").innerHTML = alljobs[thisslide].description;  //add to collection
+    document.getElementById("job").innerHTML = alljobs[2].title;
+    document.getElementById("description").innerHTML = alljobs[2].description;  //add to collection
 
     $('#form').fadeOut(350, function(){
         $("#slideshow").fadeIn(750);

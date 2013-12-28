@@ -6,49 +6,6 @@
     <link href='http://fonts.googleapis.com/css?family=Gravitas+One|Text+Me+One' rel='stylesheet' type='text/css'>
 
 
-  <script type="text/javascript">
-   var alljobs = [
-      { "title": "Doctor",
-        "description": "My mom was a doctor"
-      },
-      { "title": "Barbie",
-        "description": "Ken. Obviously."
-      },
-      { "title": "Astronaut",
-        "description": "Because, space."
-      },
-      { "title": "Beyoncé",
-        "description": "She's the queen."
-      },
-      { "title": "Bill Gates",
-        "description": "He cured malaria. Or polio."
-      },
-      { "title": "Bum",
-        "description": "Just Testing out the site."
-      },
-      { "title": "Martha Stewart",
-        "description": "yaaaaay."
-      }
-      ]
-  var thisslide = 2;
-
-  var nextslide = function(){
-      //find out what number in the array it's current showing
-      //replace title and description with next object in array
-      if (thisslide > alljobs.length){
-        return thisslide;
-      }else{
-        thisslide += 1; 
-        document.getElementById("job").innerHTML = alljobs[thisslide].title;
-         document.getElementById("description")= alljobs[thisslide].description;
-        //document.write.h1["title"]
-      }
-        
-
-   }   
-  </script>
-
-
 
 </head>
 
@@ -74,11 +31,11 @@
     </textarea>
 
     
-    <a id="formbutton" href="#" class="rounded">
+    <a id="submit" href="#" class="rounded">
       Submit
     </a>
     
-    <a id="formbutton" href="#" class="rounded skip">
+    <a id="skip" href="#" class="rounded skip">
       Skip
     </a>
 	</div>
@@ -94,15 +51,16 @@
           <a id="previousslide" href="#">Previous Slide</a>
         <div id="content">
             <p class="tobe">I've always wanted to be...</p> <br />
-            <p class="job" id="job">{{tempjob}}/p>
+            <p class="job" id="job">Astronaut</p>
             <p class="because">because</p>
-            <p class="description" id="description">{{tempdesc}}.</p>
+            <p class="description" id="description">Because, Space.</p>
         </div>
         
         <a id="nextslide" href="#">Next Slide</a>
 
 
     </div>
+
 </template>
 
 <template name="footer">

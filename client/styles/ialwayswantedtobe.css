@@ -35,7 +35,7 @@ body {
 	resize: none;
 	background-color: #fff;
 }
-#formbutton{
+#submit, #skip{
 	width: 200px;
     background-color: #888888;
     text-decoration: none;

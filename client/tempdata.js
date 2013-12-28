@@ -1,4 +1,4 @@
-var alljobs = [
+alljobs = [
 	{	"title": "Doctor",
 		"description": "My mom was a doctor"
 	},
@@ -18,8 +18,3 @@ var alljobs = [
 		"description": "yaaaaay."
 	}
 	]
-var printarray = function(){
-	for(var i=0; i < 5; i++){
-		document.writeln(alljobs[i]);
-	}
-}
