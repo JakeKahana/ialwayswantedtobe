@@ -12,21 +12,33 @@ if (Meteor.isClient) {
 Meteor.subscribe("demodata");
 console.log(Demodata.find({}));
 
-var nextslide = function(){
-  //ask server for 10 random elements from the collection (Methods;set them up on server, get them on client)
+var changebackground = function(){  
+    (function() {
+                var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+                $.getJSON( flickerAPI, {
+                  tags: document.getElementById("job").innerHTML,
+                  tagmode: "all",
+                  format: "json"
+              })
+            .done(function( data ) {
+              $.each( data.items, function( i, item ) {
+                if(!item){
+                  document.getElementById("bgimg").src = "http://fc09.deviantart.net/fs71/i/2010/346/0/0/dream_by_taenaron-d34q599.jpg";
+                }
+                else{
+                    var sourceLarge = (item.media.m).replace("_m.jpg", "_b.jpg");
+                    //$( "<img>" ).attr( "src", sourceLarge ).appendTo( "#background" );
+                    document.getElementById("bgimg").src = sourceLarge;
+                    if ( i === 0 ) {
+                    return false;
+                    }
 
-  //change background of template using Flickr API
-
-  //fade out current template
-
-  //fade in new template
-
+                  }
+       
+              });
+            });
+    })();
 }
-
-// Template.slideshow.newbg = function(){
-//  return Session.get('slideBackground');
-// }    
-
 
 var counter = 2;
 
@@ -38,7 +50,9 @@ Template.slideshow.events({
     if (counter <= alljobs.length) {
       counter += 1;
       tempjob.innerHTML = alljobs[counter].title;
-      tempdesc.innerHTML = alljobs[counter].description;    
+      tempdesc.innerHTML = alljobs[counter].description; 
+      changebackground();
+   
     }
   }
 })
@@ -51,9 +65,17 @@ Template.slideshow.events({
       counter -= 1;
       tempjob.innerHTML = alljobs[counter].title;
       tempdesc.innerHTML = alljobs[counter].description;
+      changebackground();
     };
   }
 })
+
+Template.slideshow.events({
+  'change #job': function(){
+    console.log("abc");
+    changebackground();
+  }
+});
 
 Template.form.events({
   'click #submit': function(){
