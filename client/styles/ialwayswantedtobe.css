@@ -6,25 +6,59 @@ body {
 	margin: 0;
 	padding: 0;
 	z-index: 5;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-color: #ffffff;
+	font-size: 16px;
 }
 
 #form{
 	text-align: center;
 	width:500px;
-	height: 525px;
-	background-color: #33abfa;
+	height: 400px;
+	background-color: rgba(0, 0, 0, 0.5);
 	margin: auto;
 	float: middle;
 	padding-top: 30px;
 	padding-left: 50px;
 	padding-right: 50px;
 	margin-top: 60px;
-
+	-webkit-border-radius: 10px;
+  	-moz-border-radius: 10px;
+  	border-radius: 10px;
 }
+
+#form input{
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  border: none;
+  width: 500px;
+  height: 30px;
+}
+
+#form textarea{
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border: none;
+  width: 500px;
+  height: 185px;
+}
+
+#form p{
+  opacity: 1;
+	text-align: center;
+  color: #ffffff;
+}
+
 #formword{
 	width: 500px;
 	margin-bottom: 5px;
+	padding-left: 10px;
+  	opacity: 1;
+  	font-size: 14px;
 }
+
 #formdescription{
 	width: 500px;
 	line-height: 13px;
@@ -34,7 +68,9 @@ body {
 	margin-bottom: 15px;
 	resize: none;
 	background-color: #fff;
+	opacity: 1;
 }
+
 #submit, #skip{
 	width: 200px;
     background-color: #888888;
@@ -64,6 +100,19 @@ body {
 
 #slideshow{
 	display:none;
+	text-align: center;
+	width:500px;
+	height: 525px;
+	background-color: rgba(0, 0, 0, 0.5);
+	margin: auto;
+	float: middle;
+	padding-top: 30px;
+	padding-left: 50px;
+	padding-right: 50px;
+	margin-top: 60px;
+	-webkit-border-radius: 10px;
+  	-moz-border-radius: 10px;
+  	border-radius: 10px;
 }
 
 #background {
@@ -112,11 +161,10 @@ body {
 	bottom:0;
 	width:100%;
 	height:25px;
-	background-color: #000000;
+	background-color: rgba(0, 0, 0, 0.5);
 	padding-left: 12px;  
 	padding-bottom: 20px;
 	color: #999;
-	opacity:0;
 	transition: opacity .25s ease-in-out;
    -moz-transition: opacity .25s ease-in-out;
    -webkit-transition: opacity .25s ease-in-out;
